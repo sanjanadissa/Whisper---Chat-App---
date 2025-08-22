@@ -54,7 +54,7 @@ Whisper makes it simple to **connect and communicate securely**, giving users a 
 ## 📸 Screenshots  
 
 ### Login Page  
-![Login Screenshot](./fontend/project/src/Screenshot 2025-08-23 024745.png)  
+![Login Screenshot](./fontend/project/src/chatScreen.png)  
 
 ### Chat Interface  
 ![Chat Screenshot](./assets/screenshots/chat.png)  
