@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFAFA; /* warm off-white */
+    --color-foreground: #1E293B; /* rich charcoal */
+    --color-border: #E2E8F0; /* neutral gray */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #2563EB; /* trust-building blue */
+    
+    /* Card & Popover */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #1E293B; /* rich charcoal */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #1E293B; /* rich charcoal */
+    
+    /* Muted */
+    --color-muted: #F8FAFC; /* light gray */
+    --color-muted-foreground: #64748B; /* muted slate */
+    
+    /* Primary */
+    --color-primary: #2563EB; /* trust-building blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary */
+    --color-secondary: #64748B; /* sophisticated slate */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent */
+    --color-accent: #10B981; /* success-oriented emerald */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success */
+    --color-success: #059669; /* deeper emerald */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning */
+    --color-warning: #D97706; /* balanced amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive */
+    --color-error: #DC2626; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #DC2626; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .auth-card {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+  }
+  
+  .form-field {
+    @apply space-y-2;
+  }
+  
+  .otp-field {
+    @apply w-12 h-12 text-center border border-border rounded-md bg-input text-foreground font-mono text-lg;
+  }
+  
+  .status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+  
+  .micro-animation {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .progressive-disclosure {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

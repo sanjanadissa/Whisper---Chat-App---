@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFAFA; /* warm off-white */
+    /* --color-foreground: #1E293B; rich charcoal */
+    --color-border: #E2E8F0; /* neutral gray */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #2563EB; /* trust-building blue */
+    
+    /* Card & Popover */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #1E293B; /* rich charcoal */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #1E293B; /* rich charcoal */
+    
+    /* Muted */
+    --color-muted: #F8FAFC; /* light gray */
+    --color-muted-foreground: #64748B; /* muted slate */
+    
+    /* Primary */
+    --color-primary: #2563EB; /* trust-building blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary */
+    --color-secondary: #64748B; /* sophisticated slate */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent */
+    --color-accent: #10B981; /* success-oriented emerald */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success */
+    --color-success: #059669; /* deeper emerald */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning */
+    --color-warning: #D97706; /* balanced amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive */
+    --color-error: #DC2626; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #DC2626; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .auth-card {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+  }
+  
+  .form-field {
+    @apply space-y-2;
+  }
+  
+  .otp-field {
+    @apply w-12 h-12 text-center border border-border rounded-md bg-input text-foreground font-mono text-lg;
+  }
+  
+  .status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+  
+  .micro-animation {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .progressive-disclosure {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Chat Interface Styles - Keep existing dark theme for chat */
+.chatbg {
+  background-color: #1E201E;
+}
+
+.darkbg {
+  background-color: #000000;
+}
+
+.dark2 {
+  background-color: #313233;
+}
+
+.primarychat {
+  background-color: #1A4D2E;
+}
+
+.primary2 {
+  background-color: #8B5CF6;
+}
+
+/* Background colors for auth screens */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.bg-input {
+  background-color: var(--color-input);
+}
+
+.bg-muted {
+  background-color: var(--color-muted);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-destructive {
+  background-color: var(--color-destructive);
+}
+
+/* Text colors for auth screens */
+.text-foreground {
+  color: var(--color-foreground);
+}
+
+.text-muted-foreground {
+  color: var(--color-muted-foreground);
+}
+
+.text-primary-foreground {
+  color: var(--color-primary-foreground);
+}
+
+.text-destructive-foreground {
+  color: var(--color-destructive-foreground);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+/* Border colors for auth screens */
+.border-border {
+  border-color: var(--color-border);
+}
+
+.border-input {
+  border-color: var(--color-input);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-destructive {
+  border-color: var(--color-destructive);
+}
+
+.border-error {
+  border-color: var(--color-error);
+}
+
+/* Focus ring colors for auth screens */
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-ring);
+}
+
+.focus\:ring-destructive:focus {
+  --tw-ring-color: var(--color-destructive);
+}
+
+.focus\:ring-error:focus {
+  --tw-ring-color: var(--color-error);
+}
+
+/* Hover states for auth screens */
+.hover\:bg-primary\/90:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+}
+
+.hover\:bg-muted:hover {
+  background-color: var(--color-muted);
+}
+
+.hover\:bg-destructive\/90:hover {
+  background-color: color-mix(in srgb, var(--color-destructive) 90%, transparent);
+}
+
+.hover\:text-foreground:hover {
+  color: var(--color-foreground);
+}
+
+.hover\:text-primary\/80:hover {
+  color: color-mix(in srgb, var(--color-primary) 80%, transparent);
+}
+
+.hover\:text-error\/80:hover {
+  color: color-mix(in srgb, var(--color-error) 80%, transparent);
+}
+
+.hover\:border-primary\/40:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+.hover\:border-error\/40:hover {
+  border-color: color-mix(in srgb, var(--color-error) 40%, transparent);
+} 
