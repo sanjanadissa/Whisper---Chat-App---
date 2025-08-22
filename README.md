@@ -40,7 +40,6 @@
 Whisper makes it simple to **connect and communicate securely**, giving users a private space to share their thoughts while keeping the codebase **maintainable, scalable, and developer-friendly**.  
 
 ---
-
 ## 🚀 Getting Started  
 
 ### Prerequisites  
@@ -48,17 +47,20 @@ Whisper makes it simple to **connect and communicate securely**, giving users a 
 - Node.js 18+  
 - PostgreSQL  
 
-### Backend Setup  
-
-
-## 📸 Screenshots  
-
 ### Login Page  
-![Login Screenshot](./fontend/project/src/chatScreen.png)  
+![Chat Screenshot](./assets/screenshots/Login.png)  
 
 ### Chat Interface  
-![Chat Screenshot](./assets/screenshots/chat.png)  
+![Login Screenshot](./fontend/project/src/chatScreen.png)  
 
+### Backend Setup  
 ```bash
 cd whisper-backend
 ./mvnw spring-boot:run
+
+### Frontend Setup  
+```bash
+cd whisper-frontend
+npm install
+npm run dev
+
