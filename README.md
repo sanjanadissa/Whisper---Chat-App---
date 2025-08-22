@@ -48,18 +48,16 @@ Whisper makes it simple to **connect and communicate securely**, giving users a 
 - PostgreSQL  
 
 ### Login Page  
-![Chat Screenshot](./assets/screenshots/Login.png)  
+![Chat Screenshot](./fontend/project/src/Login.png)  
 
 ### Chat Interface  
 ![Login Screenshot](./fontend/project/src/chatScreen.png)  
 
-### Backend Setup  
+###  Setup  
 ```bash
 cd whisper-backend
 ./mvnw spring-boot:run
 
-### Frontend Setup  
-```bash
 cd whisper-frontend
 npm install
 npm run dev
